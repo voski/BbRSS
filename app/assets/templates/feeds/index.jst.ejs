@@ -1,0 +1,8 @@
+<h1>All Feeds</h1>
+<ul>
+  <% feeds && feeds.each( function(feed) { %>
+    <li>
+      <%= feed.escape('title') %>
+    </li>
+  <% }) %>
+</ul>
