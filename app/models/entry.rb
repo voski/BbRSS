@@ -24,6 +24,7 @@ class Entry < ActiveRecord::Base
       link: entryData[:link],
       published_at: entryData[:pubDate],
       title: entryData[:title],
+      description: entryData[:description],
       json: entryData.to_json,
       feed_id: feed.id
     })
