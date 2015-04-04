@@ -10,12 +10,9 @@ NewsReader.Views.Show = Backbone.View.extend({
   },
 
   render: function () {
-    var content = this.template({
-        feed: this.model
-      });
-
+    var content = this.template({ feed: this.model });
     this.$el.html(content);
-
+    var that = this;
     var $ul = this.$('ol');
     this.model.entries().each(function (entry) {
       var view = new NewsReader.Views.EntryItem({ model: entry });
